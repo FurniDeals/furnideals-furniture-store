@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FurniDeals offers high-quality and stylish furniture for your home or office. Shop with us for exclusive deals and exceptional service." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>FurniDeals | Furniture Shop</title>
+  </head>
+
+  <script>
+    // Check if the user is logged in by checking sessionStorage
+    if (!sessionStorage.getItem('loggedIn')) {
+      console.log('User not logged in, redirecting...');
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">FurniDeals</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li class="nav__cart">
+          <i class="ri-shopping-cart-line" id="cart-toggle"></i>
+          <span id="cart-count">0</span>
+        </li>
+      </ul>
+
+      <div class="nav__search" id="nav-search">
+        <input type="text" id="search-input" placeholder="Search for products..." />
+        <ul id="search-suggestions" class="search-suggestions"></ul>
+        <span><i class="ri-search-2-line"></i></span>
+      </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="images/header.jpg" alt="header" loading="lazy" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1>We Help You Make Modern Interior</h1>
+          <p>
+            We will help you to make an elegant and luxurious interior designed
+            by professional interior designer.
+          </p>
+          <a href="product.html" class="shop-now-btn">Shop Now</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container deals__container">
+      <div class="deals__card">
+        <h2 class="section__header">Hot 🔥 deals for you</h2>
+        <p>Online shopping for retail sales direct to consumers</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-cash-line"></i></span>
+        <h4>1.5% cashback</h4>
+        <p>Earn a 5% cashback reward on every furniture purchase you make!</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-calendar-schedule-line"></i></span>
+        <h4>30 day terms</h4>
+        <p>Take advantage of our 30-day payment terms, completely interest-free!</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-money-rupee-circle-line"></i></span>
+        <h4>Save money</h4>
+        <p>Discover unbeatable prices and save big money on top-quality furniture!</p>
+      </div>
+    </section>
+
+    <section class="section__container product__container" id="product">
+      <h2 class="section__header">Featured Products</h2>
+      <div class="products__container" id="products-container">
+        <div class="product__grid">
+          <div class="product__card" data-name="Lavender Bliss Sofa">
+            <img src="images/product-1.png" alt="Lavender Bliss Sofa" loading="lazy" />
+            <h4>Lavender Bliss Sofa</h4>
+            <p><span>&#8369;18,000.00</span></p>
+              <div class="button-group-horizontal">
+                <button class="add-to-cart-btn" data-name="Lavender Bliss Sofa" data-price="18000">Add to Cart</button>
+                <button class="buy-now-btn" data-name="Lavender Bliss Sofa" data-price="18000">Buy Now</button>
+              </div>
+          </div>
+          <div class="product__card" data-name="Purple L-shape Sofa">
+            <img src="images/product-2.png" alt="Purple L-shape Sofa" loading="lazy" />
+            <h4>Purple L-shape Sofa</h4>
+            <p><span>&#8369;20,000.00</span></p>
+              <div class="button-group-horizontal">
+                <button class="add-to-cart-btn" data-name="Purple L-shape Sofa" data-price="20000">Add to Cart</button>
+                <button class="buy-now-btn" data-name="Purple L-shape Sofa" data-price="20000">Buy Now</button>
+              </div>
+          </div>
+          <div class="product__card" data-name="Golden Coffee Table">
+            <img src="images/product-3.png" alt="Golden Coffee Table" loading="lazy" />
+            <h4>Golden Coffee Table</h4>
+            <p><span>&#8369;7,000.00</span></p>
+              <div class="button-group-horizontal">
+                <button class="add-to-cart-btn" data-name="Golden Coffee Table" data-price="7000">Add to Cart</button>
+                <button class="buy-now-btn" data-name="Golden Coffee Table" data-price="7000">Buy Now</button>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question">What types of furniture do you offer? <span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            <p>We offer a wide range of furniture including sofas, tables, chairs, beds, and custom-made pieces tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you provide delivery services? <span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Yes, we provide nationwide delivery services with tracking to ensure your furniture arrives safely and on time.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I customize my furniture? <span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Absolutely! We offer customization options for size, color, and material to match your style and space requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">FurniDeals</a>
+          </div>
+          <p>Join us in transforming your living spaces with furniture that blends elegance and practicality seamlessly.</p>
+          <ul class="footer__socials">
+            <li><a href="https://web.facebook.com/profile.php?id=61575571196806"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="https://x.com"><i class="ri-twitter-fill"></i></a></li>
+            <li><a href="https://www.linkedin.com"><i class="ri-linkedin-fill"></i></a></li>
+            <li><a href="https://www.pinterest.com"><i class="ri-pinterest-fill"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a id="open-popup">Contact Us</a></li>
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Contact Us</h2>
+                <form>
+                  <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="input-group">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                  </div>
+                  <div class="input-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                  </div>
+                  <button type="submit">Send Message</button>
+                </form>
+              </div>
+            </div>
+            <li><a id="open-newsletter" href="#">Newsletter Signup</a></li>
+            <div id="newsletter-popup" class="popup">
+              <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest furniture collections and exclusive offers.</p>
+                <form>
+                  <label for="newsletter-email">Email</label>
+                  <input type="email" id="newsletter-email" required />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+            <li><a href="https://furnidealsblog.blogspot.com/2025/03/welcome-to-furnideals-were-thrilled-to.html">Blog/News</a></li>
+            <li><a href="">Tutorials</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="#">Downloads</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">@ 2025 FurniDeals. All rights reserved.</div>
+    </footer>
+
+    
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span class="close-cart" id="close-cart">&times;</span>
+      </div>
+      <ul id="cart-items"></ul>
+      <div class="cart-footer">
+        <p><strong>Total:</strong> ₱<span id="cart-total">0</span></p>
+        <div class="cart-buttons">
+          <button onclick="clearCart()">Clear Cart</button>
+          <button onclick="checkoutCart()">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-backdrop" id="cart-backdrop"></div>    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="main.js" defer></script>
+
+    <script>
+      // Popup script
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#open-popup").addEventListener("click", function () {
+          document.querySelector("#popup").style.display = "block";
+        });
+
+        document.querySelector("#open-newsletter").addEventListener("click", function () {
+          document.querySelector("#newsletter-popup").style.display = "block";
+        });
+
+        document.querySelectorAll(".close-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            btn.closest(".popup").style.display = "none";
+          });
+        });
+      });
+    </script>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cartDrawer = document.getElementById("cart-drawer");
+        const cartBackdrop = document.getElementById("cart-backdrop");
+        const cartItems = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        const cartCount = document.getElementById("cart-count");
+
+        // Show cart
+        document.getElementById("cart-toggle").addEventListener("click", () => {
+          cartDrawer.classList.add("active");
+          cartBackdrop.classList.add("active");
+        });
+
+        // Hide cart
+        document.getElementById("close-cart").addEventListener("click", closeCart);
+        cartBackdrop.addEventListener("click", closeCart);
+
+        function closeCart() {
+          cartDrawer.classList.remove("active");
+          cartBackdrop.classList.remove("active");
+        }
+
+        // Save cart to localStorage
+        function saveCart() {
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        // Update cart content and display
+        function updateCart() {
+          cartItems.innerHTML = "";
+          let total = 0;
+          let count = 0;
+
+          cart.forEach((item, index) => {
+            total += item.price * item.qty;
+            count += item.qty;
+
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <div class="cart-info">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="cart-name">
+                  <strong>${item.name}</strong><br>₱${item.price.toLocaleString()}
+                  <div class="qty-controls">
+                    <button onclick="changeQty(${index}, -1)">−</button>
+                    <span>${item.qty}</span>
+                    <button onclick="changeQty(${index}, 1)">+</button>
+                  </div>
+                </div>
+                <button onclick="removeItem(${index})">🗑️</button>
+              </div>
+            `;
+            cartItems.appendChild(li);
+          });
+
+          cartTotal.textContent = total.toLocaleString();
+          cartCount.textContent = count;
+          saveCart();
+        }
+
+        // Change item quantity
+        window.changeQty = function (index, delta) {
+          cart[index].qty += delta;
+          if (cart[index].qty <= 0) cart.splice(index, 1);
+          updateCart();
+        };
+
+        // Remove item from cart
+        window.removeItem = function (index) {
+          cart.splice(index, 1);
+          updateCart();
+        };
+
+        // Clear entire cart
+        window.clearCart = function () {
+          cart = [];
+          updateCart();
+        };
+
+        // Placeholder for checkout logic
+        window.checkoutCart = function () {
+          alert("Checkout is not implemented yet.\nYou can add your checkout logic here.");
+        };
+
+        // Add product to cart from product page
+        document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const name = btn.getAttribute("data-name");
+            const price = parseFloat(btn.getAttribute("data-price"));
+            const image = btn.closest(".product__card").querySelector("img").src;
+
+            const index = cart.findIndex(item => item.name === name);
+            if (index >= 0) {
+              cart[index].qty += 1;
+            } else {
+              cart.push({ name, price, image, qty: 1 });
+            }
+            updateCart();
+          });
+        });
+
+        // Initial load of the cart
+        updateCart();
+      });
+    </script>
+    <script>
+    const suggestionBox = document.getElementById("search-suggestions");
+      searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      suggestionBox.innerHTML = "";
+
+      if (query === "") {
+        suggestionBox.style.display = "none";
+        return;
+      }
+
+      let found = false;
+
+      products.forEach(product => {
+        const name = product.getAttribute("data-name");
+        if (name.toLowerCase().includes(query)) {
+          const li = document.createElement("li");
+          li.textContent = name;
+          li.addEventListener("click", () => {
+            searchInput.value = name;
+            suggestionBox.style.display = "none";
+
+            // Trigger filter
+            products.forEach(p => {
+              const pname = p.getAttribute("data-name").toLowerCase();
+              p.style.display = pname.includes(name.toLowerCase()) ? "block" : "none";
+            });
+          });
+          suggestionBox.appendChild(li);
+          found = true;
+        }
+      });
+
+      suggestionBox.style.display = found ? "block" : "none";
+    });
+    </script>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Existing cart setup
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
+        function saveCart() {
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+      
+        // Buy Now Button Behavior
+        document.querySelectorAll(".buy-now-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const name = btn.getAttribute("data-name");
+            const price = parseFloat(btn.getAttribute("data-price"));
+            const image = btn.closest(".product__card").querySelector("img").src;
+      
+            const index = cart.findIndex(item => item.name === name);
+            if (index >= 0) {
+              cart[index].qty += 1;
+            } else {
+              cart.push({ name, price, image, qty: 1 });
+            }
+      
+            saveCart();
+      
+            // Redirect to checkout page
+            window.location.href = "checkout.html";
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const searchInput = document.getElementById("search-input");
+      const products = document.querySelectorAll(".product__card");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+
+        products.forEach((product) => {
+          const name = product.getAttribute("data-name").toLowerCase();
+
+          if (name.includes(query)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+
+        menuBtn.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/67e2cee3029d97190a7355ee/1in6vgap4';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+  </body>
+</html>

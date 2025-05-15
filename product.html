@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Explore our premium furniture collection at FurniDeals." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | FurniDeals</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html" class="logo">FurniDeals</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <div class="nav__cart">
+          <i class="ri-shopping-cart-line" id="cart-toggle"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <div class="nav__search" id="nav-search">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-2-line"></i></span>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section__container product__header">
+      <h1>Our Products</h1>
+      <p>Explore our latest collection of stylish, affordable furniture perfect for any space.</p>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="section__container product__container">
+      <div class="product__grid">
+        <div class="product__card">
+          <img src="images/product-2.png" alt="Purple L-shape Sofa" loading="lazy" />
+          <div class="product__content">
+            <h4>Purple L-shape Sofa</h4>
+            <p><span>&#8369;20,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Purple L-shape Sofa" data-price="20000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Purple L-shape Sofa" data-price="20000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <img src="images/product-5.png" alt="Stylish Blue Couch" loading="lazy" />
+          <div class="product__content">
+            <h4>Stylish Blue Couch</h4>
+            <p><span>&#8369;15,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Stylish Blue Couch" data-price="15000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Stylish Blue Couch" data-price="15000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <img src="images/product-9.png" alt="Modern Gray Sofa Bed" loading="lazy" />
+          <div class="product__content">
+            <h4>Modern Gray Sofa Bed</h4>
+            <p><span>&#8369;17,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Modern Gray Sofa Bed" data-price="17000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Modern Gray Sofa Bed" data-price="17000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <img src="images/product-4.jpg" alt="Elegant Wooden Bed" loading="lazy" />
+          <div class="product__content">
+            <h4>Elegant Wooden Bed</h4>
+            <p><span>&#8369;25,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Elegant Wooden Bed" data-price="25000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Elegant Wooden Bed" data-price="25000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <img src="images/product-6.png" alt="Natural Wood Dining Set" loading="lazy" />
+          <div class="product__content">
+            <h4>Natural Wood Dining Set</h4>
+            <p><span>&#8369;15,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Natural Wood Dining Set" data-price="15000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Natural Wood Dining Set" data-price="15000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <img src="images/product-1.png" alt="Modern Dining Table Set" loading="lazy" />
+          <div class="product__content">
+            <h4>Modern Dining Table Set</h4>
+            <p><span>&#8369;18,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Modern Dining Table Set" data-price="18000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="EModern Dining Table Set" data-price="18000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-3.png" alt="Golden Coffee Table" loading="lazy" />
+            <h4>Golden Coffee Table</h4>
+            <p><span>&#8369;7,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Golden Coffee Table" data-price="7000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Golden Coffee Table" data-price="7000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-10.png" alt="Compact Stove Cabinet" loading="lazy" />
+            <h4>Compact Stove Cabinet</h4>
+            <p><span>&#8369;4,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Compact Stove Cabinet" data-price="4000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Compact Stove Cabinet" data-price="4000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-11.png" alt="2-Burner Kitchen Cabinet" loading="lazy" />
+            <h4>2-Burner Kitchen Cabinet</h4>
+            <p><span>&#8369;16,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="2-Burner Kitchen Cabinet" data-price="16000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="2-Burner Kitchen Cabinet" data-price="16000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-12.png" alt="Modern Industrial Kitchen" loading="lazy" />
+            <h4>Modern Industrial Kitchen</h4>
+            <p><span>&#8369;22,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Modern Industrial Kitchen" data-price="22000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Modern Industrial Kitchen" data-price="22000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-13.jpg" alt="Sleek Modular Kitchen" loading="lazy" />
+            <h4>Sleek Modular Kitchen</h4>
+            <p><span>&#8369;50,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Sleek Modular Kitchen" data-price="50000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Sleek Modular Kitchen" data-price="50000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-14.png" alt="Wooden Wardrobe with Mirror" loading="lazy" />
+            <h4>Wooden Wardrobe with Mirror</h4>
+            <p><span>&#8369;20,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Wooden Wardrobe with Mirror" data-price="20000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Wooden Wardrobe with Mirror" data-price="20000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-15.png" alt="Contemporary Kitchen Cabinet" loading="lazy" />
+            <h4>Contemporary Kitchen Cabinet</h4>
+            <p><span>&#8369;27,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Contemporary Kitchen Cabinet" data-price="27000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Contemporary Kitchen Cabinet" data-price="27000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-16.png" alt="Open Concept Wardrobe Rack" loading="lazy" />
+            <h4>Open Concept Wardrobe Rack</h4>
+            <p><span>&#8369;3,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Open Concept Wardrobe Rack" data-price="3000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Open Concept Wardrobe Rack" data-price="3000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-7.jpg" alt="Multi-Tiered Shoe Rack" loading="lazy" />
+            <h4>Multi-Tiered Shoe Rack</h4>
+            <p><span>&#8369;4,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Multi-Tiered Shoe Rack" data-price="4000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Multi-Tiered Shoe Rack" data-price="4000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product__card">
+          <div class="product__content">
+            <img src="images/product-8.png" alt="Gold Frame Bookshelf" loading="lazy" />
+            <h4>Gold Frame Bookshelf</h4>
+            <p><span>&#8369;6,000.00</span></p>
+            <div class="button-group-horizontal">
+              <button class="add-to-cart-btn" data-name="Gold Frame Bookshelf" data-price="6000">Add to Cart</button>
+              <button class="buy-now-btn" data-name="Gold Frame Bookshelf" data-price="6000">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer__bar">
+        &copy;@ 2025 FurniDeals. All rights reserved.
+      </div>
+    </footer>
+
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span class="close-cart" id="close-cart">&times;</span>
+      </div>
+      <ul id="cart-items"></ul>
+      <div class="cart-footer">
+        <p><strong>Total:</strong> ₱<span id="cart-total">0</span></p>
+        <div class="cart-buttons">
+          <button onclick="clearCart()">Clear Cart</button>
+          <button onclick="checkoutCart()">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-backdrop" id="cart-backdrop"></div>  
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cartDrawer = document.getElementById("cart-drawer");
+        const cartBackdrop = document.getElementById("cart-backdrop");
+        const cartItems = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        const cartCount = document.getElementById("cart-count");
+
+        // Show cart
+        document.getElementById("cart-toggle").addEventListener("click", () => {
+          cartDrawer.classList.add("active");
+          cartBackdrop.classList.add("active");
+        });
+
+        // Hide cart
+        document.getElementById("close-cart").addEventListener("click", closeCart);
+        cartBackdrop.addEventListener("click", closeCart);
+
+        function closeCart() {
+          cartDrawer.classList.remove("active");
+          cartBackdrop.classList.remove("active");
+        }
+
+        // Save cart to localStorage
+        function saveCart() {
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        // Update cart content and display
+        function updateCart() {
+          cartItems.innerHTML = "";
+          let total = 0;
+          let count = 0;
+
+          cart.forEach((item, index) => {
+            total += item.price * item.qty;
+            count += item.qty;
+
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <div class="cart-info">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="cart-name">
+                  <strong>${item.name}</strong><br>₱${item.price.toLocaleString()}
+                  <div class="qty-controls">
+                    <button onclick="changeQty(${index}, -1)">−</button>
+                    <span>${item.qty}</span>
+                    <button onclick="changeQty(${index}, 1)">+</button>
+                  </div>
+                </div>
+                <button onclick="removeItem(${index})">🗑️</button>
+              </div>
+            `;
+            cartItems.appendChild(li);
+          });
+
+          cartTotal.textContent = total.toLocaleString();
+          cartCount.textContent = count;
+          saveCart();
+        }
+
+        // Change item quantity
+        window.changeQty = function (index, delta) {
+          cart[index].qty += delta;
+          if (cart[index].qty <= 0) cart.splice(index, 1);
+          updateCart();
+        };
+
+        // Remove item from cart
+        window.removeItem = function (index) {
+          cart.splice(index, 1);
+          updateCart();
+        };
+
+        // Clear entire cart
+        window.clearCart = function () {
+          cart = [];
+          updateCart();
+        };
+
+        // Placeholder for checkout logic
+        window.checkoutCart = function () {
+          alert("Checkout is not implemented yet.\nYou can add your checkout logic here.");
+        };
+
+        // Add product to cart from product page
+        document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const name = btn.getAttribute("data-name");
+            const price = parseFloat(btn.getAttribute("data-price"));
+            const image = btn.closest(".product__card").querySelector("img").src;
+
+            const index = cart.findIndex(item => item.name === name);
+            if (index >= 0) {
+              cart[index].qty += 1;
+            } else {
+              cart.push({ name, price, image, qty: 1 });
+            }
+            updateCart();
+          });
+        });
+
+        // Initial load of the cart
+        updateCart();
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Existing cart setup
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
+        function saveCart() {
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+      
+        // Buy Now Button Behavior
+        document.querySelectorAll(".buy-now-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const name = btn.getAttribute("data-name");
+            const price = parseFloat(btn.getAttribute("data-price"));
+            const image = btn.closest(".product__card").querySelector("img").src;
+      
+            const index = cart.findIndex(item => item.name === name);
+            if (index >= 0) {
+              cart[index].qty += 1;
+            } else {
+              cart.push({ name, price, image, qty: 1 });
+            }
+      
+            saveCart();
+      
+            // Redirect to checkout page
+            window.location.href = "checkout.html";
+          });
+        });
+      });
+    </script>
+  
+  </body>
+</html>
